@@ -63,7 +63,7 @@
     cursor: pointer;
   }
 }
-.header__bottom{
+.header__bottom {
   transform: translateY(13px);
 }
 .header__top-form {
@@ -102,6 +102,8 @@
 .header__bottom {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.16);
   background-color: #fff;
+  position: relative;
+  z-index: 1;
 }
 .header__menu-list {
   display: flex;
@@ -115,16 +117,16 @@
     cursor: pointer;
     position: relative;
     background-color: #fff;
-    transition: .3s all;
+    transition: 0.3s all;
     &::before {
       content: "";
       position: absolute;
       width: 100.6%;
       height: 5px;
       background-color: #6017a3;
-      bottom: 0;
+      bottom: -0.3px;
       left: 0;
-      transition: .3s all;
+      transition: 0.3s all;
     }
     &:nth-child(2) {
       &::before {
@@ -153,13 +155,14 @@
     }
     &:hover {
       transform: translateY(-10px);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
       a {
         color: #701dbb;
       }
       .icon-header {
         fill: #701dbb;
       }
-      &::before{
+      &::before {
         height: 13px;
         bottom: -10px;
       }
@@ -169,12 +172,54 @@
     font-family: "PT Sans", sans-serif;
     text-shadow: 0 1px 0 #fff;
     font-size: 17px;
-    transition: .3s all;
+    transition: 0.3s all;
   }
 }
 .header__menu-icon {
   margin-bottom: 15px;
 }
-.icon-header{
-  transition: .3s all;
+.icon-header {
+  transition: 0.3s all;
+}
+.traveling__bg {
+  background-image: url(../img/main-bg.jpg);
+  min-height: 537px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-bottom: 1px solid #5a5a5a;
+}
+.traveling__bg-circel {
+  width: 138px;
+  height: 138px;
+  background-color: #451a4a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.traveling__bg-title{
+  line-height: 47px;
+  @include font-700;
+  color: #fff;
+  font-size: 40px;
+  max-width: 499px;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  span{
+    font-size: 20px;
+    @include font-200;
+    display: block;
+    letter-spacing: 0.2px;
+    line-height: 37px;
+  }
 }
