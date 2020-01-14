@@ -187,7 +187,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  border-bottom: 1px solid #5a5a5a;
+  background-repeat: no-repeat;
 }
 .traveling__bg-circel {
   width: 138px;
@@ -203,7 +203,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.traveling__bg-title{
+.traveling__bg-title {
   line-height: 47px;
   @include font-700;
   color: #fff;
@@ -215,11 +215,111 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  span{
+  span {
     font-size: 20px;
     @include font-200;
     display: block;
     letter-spacing: 0.2px;
     line-height: 37px;
+  }
+}
+.map {
+  background-color: #2d2d2d;
+  padding: 50px 0 100px;
+  margin-top: -6px;
+}
+.map__title {
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  line-height: 22px;
+  letter-spacing: 0.9px;
+  @include font-200;
+  span {
+    font-size: 14px;
+    color: #a161db;
+    letter-spacing: 0.35px;
+    display: block;
+    margin-top: 10px;
+  }
+  margin-bottom: 35px;
+}
+.map__content {
+  background-image: url(../img/map-bg.png);
+  min-height: 229px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  &-icon {
+    position: absolute;
+    top: 19px;
+    right: 332px;
+  }
+  &-icon1 {
+    top: 0px;
+    right: 301px;
+  }
+}
+.map__inner {
+  display: flex;
+  justify-content: space-between;
+}
+.map__item-icon {
+  width: 76px;
+  height: 76px;
+  background-size: cover;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    right: -185px;
+    height: 3px;
+    background-color: #6d6d6d;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.item-icon1 {
+  background-image: url(../img/map-item-1.svg);
+}
+.item-icon2 {
+  width: 84px;
+  height: 76px;
+  background-image: url(../img/map-item-2.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.item-icon3 {
+  background-image: url(../img/map-item-3.svg);
+  &::before{
+    display: none;
+  }
+}
+.map__item {
+  max-width: 296px;
+  width: 100%;
+  &-title {
+    line-height: 22px;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 0.6px;
+    @include font-200;
+  }
+  &-text {
+    line-height: 22px;
+    color: #fff;
+    letter-spacing: 0.3px;
+    height: 149px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 }
