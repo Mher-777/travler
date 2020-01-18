@@ -5,6 +5,8 @@ body {
   font-family: "Arial-Regular", sans-serif;
   font-size: 12px;
   line-height: 22px;
+  min-width: 320px;
+  overflow-x: hidden;
 }
 *,
 *::after,
